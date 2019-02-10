@@ -5,7 +5,7 @@
 {% block main %}
   <br>
   <br>
-  <h1 class="display">SSB, Your Favourite Chat-Site<img class="img-fluid" style="width: 10%;" src="/static/ch.png" alt="bla bla Flack!"></h1>
+  <h1 class="display">SSB, Your Favourite Chat-Site<img class="img-fluid" style="width: 10%;" src="/static/ch.png"></h1>
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6" id="form">
@@ -14,9 +14,8 @@
           <div class="form-group">
             <lable for="name">Please, Choose your Personal Name</lable>
             <input id="name" type="text" class="form-control" placeholder="Enter Name">
-            <small class="form-text text-muted">We'll save this name for the next time you visit SSB</small>
           </div>
-          <button class="btn btn-primary" type="submit">Enter</button>
+          <button class="btn btn-danger" type="submit">Confirm</button>
         </form>
       {% endif %}
       </div>
@@ -27,15 +26,10 @@
   </div>
   <br>
   <br>
-  <div class="container" id="DisplayName">
-    {% if name %}<h2>Hello <span style="color: #65d3fd;">{{ name }}</span>, nice to see you again :)</h2>{% endif %}
-    <div id="user-data" data-username="{{ name }}"></div>
-  </div>
-
   <div id="channelContainer" class="container col-md-6" style="{% if name %}{% else %}display: none;{% endif %}" id="createChannel">
     <form id="formChannel">
       <div class="form-group">
-        <label for="channel">Let's create a New Chatroom, Please Gives it a Name</label>
+        <label for="channel">Enter a name to create your chatroom</label>
         <input id="channel" type="text" autocomplete="off" class="form-control" placeholder="Enter Channel Name">
         <small id="channelMessage" style="color: #096bff"></small>
       </div>
@@ -46,8 +40,7 @@
   </div>
   <div class="container">
     <ul class="list-unstyled">
-      <li style="font-weight: bold; font-size: 1.3rem;">These are all the available Channels in this moment</li>
-      <small>(Click on everyone to Enter the Chatroom)</small>
+      <li style="font-weight: bold; font-size: 1.3rem;">Available Chatrooms for you</li>
       <hr class="col-md-6">
     </ul>
     <ul class="list-unstyled" id="channelList">
