@@ -1,4 +1,4 @@
-# Online Real time chat application
+# Online Real time chat application - SSB
 ### Viraj Dissanayake
 
 #### To run this Flask application:
